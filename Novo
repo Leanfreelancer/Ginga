@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuração de Mineração de Criptomoedas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #4682b4;
+            color: white;
+            padding: 10px 0;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        footer {
+            background-color: #4682b4;
+            color: white;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        .info-block {
+            background-color: #e6e6e6;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 20px 0;
+            text-align: left;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Configuração de Mineração de Criptomoedas</h1>
+    </header>
+    <div class="container">
+        <h2>Informações do Projeto</h2>
+        <p>Este site fornece informações sobre como configurar a mineração de criptomoedas e gerenciar suas transferências.</p>
+
+        <h2>Configuração de Mineração</h2>
+        <p>Para configurar seu minerador, siga as instruções abaixo:</p>
+        <div class="info-block">
+            1. **Escolher uma Plataforma de Mineração**:<br>
+               - Use uma plataforma como NiceHash ou Genesis Mining para mineração na nuvem.<br>
+               - Se for minerar localmente, configure o hardware e o software apropriados.<br><br>
+
+            2. **Criar uma Carteira Digital**:<br>
+               - Configure uma carteira digital para receber suas criptomoedas. Exemplos incluem Exodus, MetaMask, etc.<br><br>
+
+            3. **Configurar o Software de Mineração**:<br>
+               - Baixe e configure o software de mineração apropriado, como CGMiner ou Ethminer.<br>
+               - Exemplo de configuração do arquivo `cgminer.conf`:<br>
+                 <pre>
+                 {
+                   "pools": [
+                     {
+                       "url": "stratum+tcp://POOL_URL:PORT",
+                       "user": "YOUR_WORKER_NAME",
+                       "pass": "YOUR_PASSWORD"
+                     }
+                   ],
+                   "api-listen": true,
+                   "api-allow": "W:127.0.0.1"
+                 }
+                 </pre><br>
+
+            4. **Iniciar a Mineração**:<br>
+               - Execute o software de mineração com o arquivo de configuração.<br>
+        </div>
+
+        <h2>Gerenciar Transferências</h2>
+        <p>Para transferir criptomoedas:</p>
+        <div class="info-block">
+            1. **Receber Criptomoeda**:<br>
+               - Configure seu minerador ou pool para enviar as recompensas para o endereço da sua carteira digital.<br><br>
+
+            2. **Enviar Criptomoeda**:<br>
+               - No software da sua carteira, vá para a opção de enviar, insira o endereço da carteira de destino e a quantidade desejada.<br>
+        </div>
+
+        <h2>Segurança</h2>
+        <p>Para proteger suas informações:</p>
+        <div class="info-block">
+            - **Nunca Compartilhe Dados Sensíveis**: Não compartilhe suas senhas, endereços de carteira, ou chaves privadas publicamente.<br>
+            - **Use Senhas Fortes e Autenticação de Dois Fatores**: Proteja suas contas e carteiras com medidas adicionais de segurança.<br>
+            - **Mantenha o Software Atualizado**: Garanta que seu software de mineração e carteiras estão sempre atualizados para evitar vulnerabilidades.<br>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Configuração de Mineração de Criptomoedas</p>
+    </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Broze - Day Trader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #00796b;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .header {
+            background-color: #004d40;
+            color: #ffffff;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+        }
+        .chat-box {
+            border: 2px solid #00796b;
+            border-radius: 10px;
+            width: 400px;
+            height: 500px;
+            overflow: hidden;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .chat-log {
+            height: 80%;
+            padding: 10px;
+            overflow-y: scroll;
+            border-bottom: 2px solid #00796b;
+        }
+        .chat-input {
+            display: flex;
+            border-top: 2px solid #00796b;
+            padding: 10px;
+        }
+        .chat-input input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #00796b;
+            border-radius: 5px;
+        }
+        .chat-input button {
+            background-color: #00796b;
+            color: #ffffff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .chat-input button:hover {
+            background-color: #004d40;
+        }
+        .button {
+            background-color: #00796b;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #004d40;
+        }
+        .arrow {
+            font-size: 24px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Dragon Broze - Day Trader</h1>
+        <p>Negociação no mercado de valores com 90% de assertividade</p>
+        <button class="button">Entrar em contato</button>
+    </div>
+    <div class="container">
+        <div class="chat-box">
+            <div class="chat-log" id="chat-log">
+                <div><strong>Dragon Broze:</strong> Olá! Como posso ajudar você hoje?</div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Digite sua mensagem...">
+                <button onclick="sendMessage()">Enviar <span class="arrow">→</span></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Função de previsão simulada
+        function getTradePrediction(message) {
+            // Simulação de uma resposta baseada na mensagem do usuário
+            if (message.toLowerCase().includes("comprar")) {
+                return "Recomendamos a compra com base nas tendências atuais.";
+            } else if (message.toLowerCase().includes("vender")) {
+                return "Recomendamos a venda com base nas tendências atuais.";
+            } else {
+                return "Não podemos fornecer uma recomendação específica no momento.";
+            }
+        }
+
+        function sendMessage() {
+            const userInput = document.getElementById('user-input').value;
+            const chatLog = document.getElementById('chat-log');
+            
+            if (userInput.trim() !== '') {
+                const userMessage = `<div><strong>Você:</strong> ${userInput}</div>`;
+                const botMessage = `<div><strong>Dragon Broze:</strong> ${getTradePrediction(userInput)}</div>`;
+                
+                chatLog.innerHTML += userMessage + botMessage;
+                chatLog.scrollTop = chatLog.scrollHeight;
+                
+                document.getElementById('user-input').value = '';
+            }
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuração de Mineração de Criptomoedas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #4682b4;
+            color: white;
+            padding: 10px 0;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        footer {
+            background-color: #4682b4;
+            color: white;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .info-block {
+            background-color: #e6e6e6;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 20px 0;
+            text-align: left;
+            white-space: pre-wrap;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Configuração de Mineração de Criptomoedas</h1>
+    </header>
+    <div class="container">
+        <h2>Informações do Projeto</h2>
+        <p>Este site fornece informações sobre como configurar a mineração de criptomoedas e gerenciar suas transferências.</p>
+
+        <h2>Configuração de Mineração</h2>
+        <p>Para configurar seu minerador, siga as instruções abaixo:</p>
+        <div class="info-block">
+            <p>1. **Escolher uma Plataforma de Mineração**:<br>
+               - Use uma plataforma como NiceHash ou Genesis Mining para mineração na nuvem.<br>
+               - Se for minerar localmente, configure o hardware e o software apropriados.<br><br>
+
+            2. **Criar uma Carteira Digital**:<br>
+               - Configure uma carteira digital para receber suas criptomoedas. Exemplos incluem Exodus, MetaMask, etc.<br><br>
+
+            3. **Configurar o Software de Mineração**:<br>
+               - Baixe e configure o software de mineração apropriado, como CGMiner ou Ethminer.<br>
+               - Exemplo de configuração do arquivo <code>cgminer.conf</code>:<br>
+               <pre>
+{
+  "pools": [
+    {
+      "url": "stratum+tcp://POOL_URL:PORT",
+      "user": "YOUR_WORKER_NAME",
+      "pass": "YOUR_PASSWORD"
+    }
+  ],
+  "api-listen": true,
+  "api-allow": "W:127.0.0.1"
+}
+               </pre><br>
+
+            4. **Iniciar a Mineração**:<br>
+               - Execute o software de mineração com o arquivo de configuração.<br>
+            </p>
+        </div>
+
+        <h2>Gerenciar Transferências</h2>
+        <p>Para transferir criptomoedas:</p>
+        <div class="info-block">
+            <p>1. **Receber Criptomoeda**:<br>
+               - Configure seu minerador ou pool para enviar as recompensas para o endereço da sua carteira digital.<br><br>
+
+            2. **Enviar Criptomoeda**:<br>
+               - No software da sua carteira, vá para a opção de enviar, insira o endereço da carteira de destino e a quantidade desejada.<br>
+            </p>
+        </div>
+
+        <h2>Segurança</h2>
+        <p>Para proteger suas informações:</p>
+        <div class="info-block">
+            <p>- **Nunca Compartilhe Dados Sensíveis**: Não compartilhe suas senhas, endereços de carteira, ou chaves privadas publicamente.<br>
+            - **Use Senhas Fortes e Autenticação de Dois Fatores**: Proteja suas contas e carteiras com medidas adicionais de segurança.<br>
+            - **Mantenha o Software Atualizado**: Garanta que seu software de mineração e carteiras estão sempre atualizados para evitar vulnerabilidades.<br>
+            </p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Configuração de Mineração de Criptomoedas</p>
+    </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Inteligente</title>
+    <style>
+        /* Estilos como antes */
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Chat Inteligente</h1>
+    </div>
+    <div class="container">
+        <div class="chat-box">
+            <div class="chat-log" id="chat-log">
+                <div><strong>Chatbot:</strong> Olá! Como posso ajudar você hoje?</div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Digite sua mensagem...">
+                <button onclick="sendMessage()">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function sendMessage() {
+            const userInput = document.getElementById('user-input').value;
+            const chatLog = document.getElementById('chat-log');
+            
+            if (userInput.trim() !== '') {
+                const userMessage = `<div><strong>Você:</strong> ${userInput}</div>`;
+                chatLog.innerHTML += userMessage;
+
+                try {
+                    const response = await fetch('/chat', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ message: userInput })
+                    });
+                    const data = await response.json();
+                    const botMessage = `<div><strong>Chatbot:</strong> ${data.message}</div>`;
+                    chatLog.innerHTML += botMessage;
+                } catch (error) {
+                    const botMessage = `<div><strong>Chatbot:</strong> Ocorreu um erro. Tente novamente.</div>`;
+                    chatLog.innerHTML += botMessage;
+                }
+
+                chatLog.scrollTop = chatLog.scrollHeight;
+                document.getElementById('user-input').value = '';
+            }
+        }
+    </script>
+</body>
+</html>
+const express = require('express');
+const bodyParser = require('body-parser');
+const axios = require('axios');
+const OpenAI = require('openai');
+
+const app = express();
+const port = 3000;
+
+app.use(bodyParser.json());
+
+const openai = new OpenAI({
+    apiKey: 'YOUR_OPENAI_API_KEY'
+});
+
+app.post('/chat', async (req, res) => {
+    const userMessage = req.body.message;
+
+    try {
+        const response = await openai.completions.create({
+            model: 'text-davinci-003',
+            prompt: userMessage,
+            max_tokens: 150
+        });
+
+        const botMessage = response.data.choices[0].text.trim();
+        res.json({ message: botMessage });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Internal server error' });
+    }
+});
+
+app.listen(port, () => {
+    console.log(`Server running at http://localhost:${port}`);
+});
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transferência de Criptomoedas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #4682b4;
+            color: white;
+            padding: 10px 0;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        footer {
+            background-color: #4682b4;
+            color: white;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .info-block {
+            background-color: #e6e6e6;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 20px 0;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Transferência de Criptomoedas</h1>
+    </header>
+    <div class="container">
+        <h2>Transferindo Criptomoedas</h2>
+        <p>Para realizar uma transferência de criptomoeda, siga as instruções abaixo:</p>
+        <div class="info-block">
+            <p>1. **Escolher a Carteira**:<br>
+               - Abra o software da sua carteira digital.<br><br>
+
+            2. **Preparar a Transação**:<br>
+               - Selecione a opção de enviar criptomoeda.<br>
+               - Insira o endereço da carteira de destino e a quantidade de criptomoeda.<br><br>
+
+            3. **Confirmar a Transação**:<br>
+               - Revise os detalhes da transação.<br>
+               - Confirme e execute a transação.<br><br>
+
+            4. **Verificar o Status**:<br>
+               - Verifique o status da transação na sua carteira e no blockchain, se necessário.<br>
+            </p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Transferência de Criptomoedas</p>
+    </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Negociação e Previsões</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #00796b;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .header {
+            background-color: #004d40;
+            color: #ffffff;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+        }
+        .chat-box {
+            border: 2px solid #00796b;
+            border-radius: 10px;
+            width: 400px;
+            height: 500px;
+            overflow: hidden;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .chat-log {
+            height: 80%;
+            padding: 10px;
+            overflow-y
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem 3D Realista Azul Pérola</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Incluindo a biblioteca Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <script>
+        // Configuração da cena
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        // Adicionar uma esfera
+        const geometry = new THREE.SphereGeometry(5, 32, 32);
+
+        // Carregar textura azul pérola
+        const textureLoader = new THREE.TextureLoader();
+        const texture = textureLoader.load('https://example.com/blue-pearl-texture.jpg'); // Substitua com o URL da textura real
+        const material = new THREE.MeshStandardMaterial({ map: texture });
+        const sphere = new THREE.Mesh(geometry, material);
+        scene.add(sphere);
+
+        // Adicionar uma luz
+        const light = new THREE.PointLight(0xffffff, 1, 100);
+        light.position.set(10, 10, 10);
+        scene.add(light);
+
+        // Configuração da câmera
+        camera.position.z = 10;
+
+        // Função de animação
+        function animate() {
+            requestAnimationFrame(animate);
+            sphere.rotation.x += 0.01;
+            sphere.rotation.y += 0.01;
+            renderer.render(scene, camera);
+        }
+
+        animate();
+
+        // Ajustar o tamanho da tela ao redimensionar
+        window.addEventListener('resize', () => {
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+        });
+    </script>
+</body>
+</html>
