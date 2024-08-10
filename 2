@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Broze - Day Trader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #00796b;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .header {
+            background-color: #004d40;
+            color: #ffffff;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+        }
+        .chat-box {
+            border: 2px solid #00796b;
+            border-radius: 10px;
+            width: 400px;
+            height: 500px;
+            overflow: hidden;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .chat-log {
+            height: 80%;
+            padding: 10px;
+            overflow-y: scroll;
+            border-bottom: 2px solid #00796b;
+        }
+        .chat-input {
+            display: flex;
+            border-top: 2px solid #00796b;
+            padding: 10px;
+        }
+        .chat-input input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #00796b;
+            border-radius: 5px;
+        }
+        .chat-input button {
+            background-color: #00796b;
+            color: #ffffff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .chat-input button:hover {
+            background-color: #004d40;
+        }
+        .button {
+            background-color: #00796b;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #004d40;
+        }
+        .arrow {
+            font-size: 24px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Dragon Broze - Day Trader</h1>
+        <p>Negociação no mercado de valores com 90% de assertividade</p>
+        <button class="button">Entrar em contato</button>
+    </div>
+    <div class="container">
+        <div class="chat-box">
+            <div class="chat-log" id="chat-log">
+                <div><strong>Dragon Broze:</strong> Olá! Como posso ajudar você hoje?</div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Digite sua mensagem...">
+                <button onclick="sendMessage()">Enviar <span class="arrow">→</span></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Função de previsão simulada
+        function getTradePrediction(message) {
+            // Simulação de uma resposta baseada na mensagem do usuário
+            if (message.toLowerCase().includes("comprar")) {
+                return "Recomendamos a compra com base nas tendências atuais.";
+            } else if (message.toLowerCase().includes("vender")) {
+                return "Recomendamos a venda com base nas tendências atuais.";
+            } else {
+                return "Não podemos fornecer uma recomendação específica no momento.";
+            }
+        }
+
+        function sendMessage() {
+            const userInput = document.getElementById('user-input').value;
+            const chatLog = document.getElementById('chat-log');
+            
+            if (userInput.trim() !== '') {
+                const userMessage = `<div><strong>Você:</strong> ${userInput}</div>`;
+                const botMessage = `<div><strong>Dragon Broze:</strong> ${getTradePrediction(userInput)}</div>`;
+                
+                chatLog.innerHTML += userMessage + botMessage;
+                chatLog.scrollTop = chatLog.scrollHeight;
+                
+                document.getElementById('user-input').value = '';
+            }
+        }
+    </script>
+</body>
+</html>
