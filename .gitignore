@@ -1,18 +1,108 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuração de Mineração de Criptomoedas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #4682b4;
+            color: white;
+            padding: 10px 0;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        footer {
+            background-color: #4682b4;
+            color: white;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        .info-block {
+            background-color: #e6e6e6;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 20px 0;
+            text-align: left;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Configuração de Mineração de Criptomoedas</h1>
+    </header>
+    <div class="container">
+        <h2>Informações do Projeto</h2>
+        <p>Este site fornece informações sobre como configurar a mineração de criptomoedas e gerenciar suas transferências.</p>
 
-# Other files and folders
-.settings/
+        <h2>Configuração de Mineração</h2>
+        <p>Para configurar seu minerador, siga as instruções abaixo:</p>
+        <div class="info-block">
+            1. **Escolher uma Plataforma de Mineração**:<br>
+               - Use uma plataforma como NiceHash ou Genesis Mining para mineração na nuvem.<br>
+               - Se for minerar localmente, configure o hardware e o software apropriados.<br><br>
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
+            2. **Criar uma Carteira Digital**:<br>
+               - Configure uma carteira digital para receber suas criptomoedas. Exemplos incluem Exodus, MetaMask, etc.<br><br>
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+            3. **Configurar o Software de Mineração**:<br>
+               - Baixe e configure o software de mineração apropriado, como CGMiner ou Ethminer.<br>
+               - Exemplo de configuração do arquivo `cgminer.conf`:<br>
+                 <pre>
+                 {
+                   "pools": [
+                     {
+                       "url": "stratum+tcp://POOL_URL:PORT",
+                       "user": "YOUR_WORKER_NAME",
+                       "pass": "YOUR_PASSWORD"
+                     }
+                   ],
+                   "api-listen": true,
+                   "api-allow": "W:127.0.0.1"
+                 }
+                 </pre><br>
+
+            4. **Iniciar a Mineração**:<br>
+               - Execute o software de mineração com o arquivo de configuração.<br>
+        </div>
+
+        <h2>Gerenciar Transferências</h2>
+        <p>Para transferir criptomoedas:</p>
+        <div class="info-block">
+            1. **Receber Criptomoeda**:<br>
+               - Configure seu minerador ou pool para enviar as recompensas para o endereço da sua carteira digital.<br><br>
+
+            2. **Enviar Criptomoeda**:<br>
+               - No software da sua carteira, vá para a opção de enviar, insira o endereço da carteira de destino e a quantidade desejada.<br>
+        </div>
+
+        <h2>Segurança</h2>
+        <p>Para proteger suas informações:</p>
+        <div class="info-block">
+            - **Nunca Compartilhe Dados Sensíveis**: Não compartilhe suas senhas, endereços de carteira, ou chaves privadas publicamente.<br>
+            - **Use Senhas Fortes e Autenticação de Dois Fatores**: Proteja suas contas e carteiras com medidas adicionais de segurança.<br>
+            - **Mantenha o Software Atualizado**: Garanta que seu software de mineração e carteiras estão sempre atualizados para evitar vulnerabilidades.<br>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Configuração de Mineração de Criptomoedas</p>
+    </footer>
+</body>
+</html>
+
